@@ -1,0 +1,66 @@
+﻿@model StarSecurityServices.Models.Client
+@{
+    ViewData["Title"] = "Edit Client";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-building me-2" style="color:var(--primary)"></i>Edit Client
+    </h5>
+    <a asp-controller="Admin" asp-action="Clients" class="btn-back">
+        <i class="fas fa-arrow-left me-2"></i>Back
+    </a>
+</div>
+
+<div class="form-card">
+    <form method="post" asp-action="EditClient" asp-controller="Admin">
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">Client Name *</label>
+                <input type="text" name="ClientName" class="form-control"
+                       value="@Model.ClientName" required />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Services Availed</label>
+                <select name="ServicesAvailed" class="form-select">
+                    @foreach (var svc in new[] { "Manned Guarding", "Cash Services",
+                        "Electronic Systems", "Recruitment & Training",
+                        "VIP Security", "CCTV Systems" })
+                    {
+                        <option value="@svc"
+                                selected="@(Model.ServicesAvailed == svc)">
+                            @svc
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Staff Assigned</label>
+                <input type="number" name="StaffAssigned" class="form-control"
+                       value="@Model.StaffAssigned" min="0" />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Icon Class (Font Awesome)</label>
+                <input type="text" name="IconClass" class="form-control"
+                       value="@Model.IconClass" />
+            </div>
+
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn-primary-admin">
+                    <i class="fas fa-save me-2"></i>Update Client
+                </button>
+                <a asp-controller="Admin" asp-action="Clients"
+                   class="btn-back ms-2">Cancel</a>
+            </div>
+
+        </div>
+    </form>
+</div>

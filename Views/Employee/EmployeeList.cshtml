@@ -1,0 +1,72 @@
+﻿@model List<StarSecurityServices.Models.Employee>
+@{
+    ViewData["Title"] = "All Employees";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-users me-2" style="color:var(--primary)"></i>
+        All Employees
+    </h5>
+    <span style="font-size:.82rem; color:#888;">
+        Total: <strong style="color:var(--primary)">@Model.Count</strong> Employees
+    </span>
+</div>
+
+@if (Model.Count == 0)
+{
+    <div class="text-center py-5">
+        <i class="fas fa-users fa-3x mb-3" style="color:#ddd;"></i>
+        <h5 style="color:#888;">No employees found.</h5>
+    </div>
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var emp in Model)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="emp-card">
+                    <div class="emp-card-header">
+                        <div class="emp-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="emp-card-name">@emp.FullName</div>
+                            <div class="emp-card-code">
+                                <i class="fas fa-id-badge me-1"></i>@emp.EmployeeCode
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emp-card-body">
+                        <div class="emp-info-row">
+                            <i class="fas fa-building"></i>
+                            <span>@emp.Department</span>
+                        </div>
+                        <div class="emp-info-row">
+                            <i class="fas fa-layer-group"></i>
+                            <span>@emp.Grade</span>
+                        </div>
+                        <div class="emp-info-row">
+                            <i class="fas fa-phone"></i>
+                            <span>@emp.ContactNumber</span>
+                        </div>
+                        <div class="emp-info-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>@emp.Address</span>
+                        </div>
+                    </div>
+                    <div class="emp-card-footer">
+                        <a asp-controller="Employee"
+                               asp-action="EmployeeDetail"
+                               asp-route-id="@emp.Id"
+                               class="emp-detail-btn">
+                            <i class="fas fa-eye me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

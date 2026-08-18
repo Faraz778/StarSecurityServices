@@ -1,0 +1,198 @@
+﻿@{
+    ViewData["Title"] = "Site Map";
+}
+
+<!-- ===== HERO ===== -->
+<section style="background:var(--dark); padding:60px 0;">
+    <div class="container text-center">
+        <div class="sec-tag sec-tag-center">Navigation</div>
+        <h2 class="sec-title sec-title-white">Site <span>Map</span></h2>
+        <div class="title-line title-line-center"></div>
+        <p class="sec-desc sec-desc-white mx-auto" style="max-width:500px;">
+            Complete overview of all pages and sections available on
+            Star Security Services website.
+        </p>
+    </div>
+</section>
+
+<!-- ===== SITEMAP CONTENT ===== -->
+<section style="background:var(--light);">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- PUBLIC WEBSITE -->
+            <div class="col-md-6 col-lg-4">
+                <div class="sitemap-card">
+                    <div class="sitemap-card-header">
+                        <i class="fas fa-globe"></i> Public Website
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a asp-controller="Home" asp-action="Index">
+                                <i class="fas fa-angle-right"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="About">
+                                <i class="fas fa-angle-right"></i> About Us
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> Company History</li>
+                                <li><i class="fas fa-minus"></i> Chairman's Profile</li>
+                                <li><i class="fas fa-minus"></i> Board of Directors</li>
+                                <li><i class="fas fa-minus"></i> Our Team</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Services">
+                                <i class="fas fa-angle-right"></i> Our Business
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> Manned Guarding</li>
+                                <li><i class="fas fa-minus"></i> Cash Services</li>
+                                <li><i class="fas fa-minus"></i> Electronic Systems</li>
+                                <li><i class="fas fa-minus"></i> Recruitment & Training</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Network">
+                                <i class="fas fa-angle-right"></i> Our Network
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> North Region</li>
+                                <li><i class="fas fa-minus"></i> West Region</li>
+                                <li><i class="fas fa-minus"></i> East Region</li>
+                                <li><i class="fas fa-minus"></i> South Region</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Careers">
+                                <i class="fas fa-angle-right"></i> Careers
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> Current Vacancies</li>
+                                <li><i class="fas fa-minus"></i> Apply Online</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Testimonials">
+                                <i class="fas fa-angle-right"></i> Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Contact">
+                                <i class="fas fa-angle-right"></i> Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Home" asp-action="SiteMap">
+                                <i class="fas fa-angle-right"></i> Site Map
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EMPLOYEE PORTAL -->
+            <div class="col-md-6 col-lg-4">
+                <div class="sitemap-card">
+                    <div class="sitemap-card-header">
+                        <i class="fas fa-user-shield"></i> Employee Portal
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a asp-controller="Account" asp-action="Login">
+                                <i class="fas fa-angle-right"></i> Login
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Employee" asp-action="Profile">
+                                <i class="fas fa-angle-right"></i> My Profile
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> Personal Information</li>
+                                <li><i class="fas fa-minus"></i> Job Information</li>
+                                <li><i class="fas fa-minus"></i> Achievements</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Employee" asp-action="EmployeeList">
+                                <i class="fas fa-angle-right"></i> All Employees
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> Employee Cards</li>
+                                <li><i class="fas fa-minus"></i> Employee Detail</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Account" asp-action="Logout">
+                                <i class="fas fa-angle-right"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ADMIN PANEL -->
+            <div class="col-md-6 col-lg-4">
+                <div class="sitemap-card">
+                    <div class="sitemap-card-header">
+                        <i class="fas fa-gauge"></i> Admin Panel
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a asp-controller="Admin" asp-action="Dashboard">
+                                <i class="fas fa-angle-right"></i> Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Admin" asp-action="Employees">
+                                <i class="fas fa-angle-right"></i> Employees
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> View All Employees</li>
+                                <li><i class="fas fa-minus"></i> Add Employee</li>
+                                <li><i class="fas fa-minus"></i> Edit Employee</li>
+                                <li><i class="fas fa-minus"></i> Delete Employee</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Admin" asp-action="Clients">
+                                <i class="fas fa-angle-right"></i> Clients
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> View All Clients</li>
+                                <li><i class="fas fa-minus"></i> Add Client</li>
+                                <li><i class="fas fa-minus"></i> Edit Client</li>
+                                <li><i class="fas fa-minus"></i> Delete Client</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Admin" asp-action="Vacancies">
+                                <i class="fas fa-angle-right"></i> Vacancies
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> View All Vacancies</li>
+                                <li><i class="fas fa-minus"></i> Add Vacancy</li>
+                                <li><i class="fas fa-minus"></i> Edit Vacancy</li>
+                                <li><i class="fas fa-minus"></i> Delete Vacancy</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="Admin" asp-action="Services">
+                                <i class="fas fa-angle-right"></i> Services
+                            </a>
+                            <ul class="sitemap-sublist">
+                                <li><i class="fas fa-minus"></i> View All Services</li>
+                                <li><i class="fas fa-minus"></i> Add Service</li>
+                                <li><i class="fas fa-minus"></i> Edit Service</li>
+                                <li><i class="fas fa-minus"></i> Delete Service</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

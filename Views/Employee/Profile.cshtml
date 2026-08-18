@@ -1,0 +1,99 @@
+﻿@model StarSecurityServices.Models.Employee
+@{
+    ViewData["Title"] = "My Profile";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+@if (Model == null)
+{
+    <div class="alert-box">
+        <i class="fas fa-exclamation-circle"></i>
+        @ViewBag.Message
+    </div>
+}
+else
+{
+    <!-- PROFILE HEADER -->
+    <div class="profile-header mb-4">
+        <div class="profile-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <div>
+            <div class="profile-name">@Model.FullName</div>
+            <div class="profile-code">
+                <i class="fas fa-id-badge me-1" style="color:var(--primary)"></i>
+                @Model.EmployeeCode
+            </div>
+            <div class="profile-dept">
+                <i class="fas fa-building me-1" style="color:var(--primary)"></i>
+                @Model.Department
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO CARDS -->
+    <div class="row g-4">
+
+        <!-- Personal Info -->
+        <div class="col-lg-6">
+            <div class="info-card">
+                <div class="info-card-title">
+                    <i class="fas fa-user-circle"></i> Personal Information
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Full Name</div>
+                    <div class="info-val">@Model.FullName</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Employee Code</div>
+                    <div class="info-val">
+                        <strong style="color:var(--primary)">@Model.EmployeeCode</strong>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Contact Number</div>
+                    <div class="info-val">@Model.ContactNumber</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Address</div>
+                    <div class="info-val">@Model.Address</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Qualification</div>
+                    <div class="info-val">@Model.Qualification</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Info -->
+        <div class="col-lg-6">
+            <div class="info-card">
+                <div class="info-card-title">
+                    <i class="fas fa-briefcase"></i> Job Information
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Department</div>
+                    <div class="info-val">@Model.Department</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Grade</div>
+                    <div class="info-val">
+                        <span class="grade-badge">@Model.Grade</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Joining Date</div>
+                    <div class="info-val">@Model.JoiningDate?.ToString("dd MMM yyyy")</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Achievements</div>
+                    <div class="info-val">
+                        @(string.IsNullOrEmpty(Model.Achievements)
+                            ? "None recorded" : Model.Achievements)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

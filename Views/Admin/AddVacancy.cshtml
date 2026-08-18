@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Add Vacancy";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var today = DateOnly.FromDateTime(DateTime.Now).ToString("yyyy-MM-dd");
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-plus me-2" style="color:var(--primary)"></i>Add New Vacancy
+    </h5>
+    <a asp-controller="Admin" asp-action="Vacancies" class="btn-back">
+        <i class="fas fa-arrow-left me-2"></i>Back
+    </a>
+</div>
+
+<div class="form-card">
+    <form method="post" asp-action="AddVacancy" asp-controller="Admin">
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">Job Title *</label>
+                <input type="text" name="Title" class="form-control"
+                       placeholder="e.g. Senior Security Supervisor" required />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Department</label>
+                <select name="Department" class="form-select">
+                    <option value="" disabled selected>-- Select Department --</option>
+                    <option>Manned Guarding</option>
+                    <option>Cash Services</option>
+                    <option>Electronic Systems</option>
+                    <option>Recruitment & Training</option>
+                    <option>HR Division</option>
+                    <option>Administration</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">City</label>
+                <input type="text" name="City" class="form-control"
+                       placeholder="e.g. Karachi" />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Job Type</label>
+                <select name="JobType" class="form-select">
+                    <option value="" disabled selected>-- Select Type --</option>
+                    <option>Full Time</option>
+                    <option>Part Time</option>
+                    <option>Contract</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Posted Date</label>
+                <input type="date" name="PostedDate" class="form-control"
+                       value="@today" />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Status</label>
+                <select name="IsFilled" class="form-select">
+                    <option value="false">Open</option>
+                    <option value="true">Filled</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea name="Description" class="form-control" rows="4"
+                          placeholder="Job description and requirements..."></textarea>
+            </div>
+
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn-primary-admin">
+                    <i class="fas fa-save me-2"></i>Save Vacancy
+                </button>
+                <a asp-controller="Admin" asp-action="Vacancies"
+                   class="btn-back ms-2">Cancel</a>
+            </div>
+
+        </div>
+    </form>
+</div>

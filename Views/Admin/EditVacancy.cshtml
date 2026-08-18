@@ -1,0 +1,94 @@
+﻿@model StarSecurityServices.Models.Vacancy
+@{
+    ViewData["Title"] = "Edit Vacancy";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var postedDate = Model.PostedDate.ToString("yyyy-MM-dd");
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-edit me-2" style="color:var(--primary)"></i>Edit Vacancy
+    </h5>
+    <a asp-controller="Admin" asp-action="Vacancies" class="btn-back">
+        <i class="fas fa-arrow-left me-2"></i>Back
+    </a>
+</div>
+
+<div class="form-card">
+    <form method="post" asp-action="EditVacancy" asp-controller="Admin">
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">Job Title *</label>
+                <input type="text" name="Title" class="form-control"
+                       value="@Model.Title" required />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Department</label>
+                <select name="Department" class="form-select">
+                    @foreach (var dept in new[] { "Manned Guarding", "Cash Services",
+                        "Electronic Systems", "Recruitment & Training",
+                        "HR Division", "Administration" })
+                    {
+                        <option value="@dept"
+                                selected="@(Model.Department == dept)">
+                            @dept
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">City</label>
+                <input type="text" name="City" class="form-control"
+                       value="@Model.City" />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Job Type</label>
+                <select name="JobType" class="form-select">
+                    @foreach (var type in new[] { "Full Time", "Part Time", "Contract" })
+                    {
+                        <option value="@type"
+                                selected="@(Model.JobType == type)">
+                            @type
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Posted Date</label>
+                <input type="date" name="PostedDate" class="form-control"
+                       value="@postedDate" />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Status</label>
+                <select name="IsFilled" class="form-select">
+                    <option value="false" selected="@(Model.IsFilled == false)">Open</option>
+                    <option value="true" selected="@(Model.IsFilled == true)">Filled</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea name="Description" class="form-control"
+                          rows="4">@Model.Description</textarea>
+            </div>
+
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn-primary-admin">
+                    <i class="fas fa-save me-2"></i>Update Vacancy
+                </button>
+                <a asp-controller="Admin" asp-action="Vacancies"
+                   class="btn-back ms-2">Cancel</a>
+            </div>
+
+        </div>
+    </form>
+</div>

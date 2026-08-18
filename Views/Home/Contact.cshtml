@@ -1,0 +1,151 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<!-- ===== HERO ===== -->
+<section style="background:var(--dark); padding:60px 0;">
+    <div class="container text-center">
+        <div class="sec-tag sec-tag-center">Get In Touch</div>
+        <h2 class="sec-title sec-title-white">Contact <span>Us</span></h2>
+        <div class="title-line title-line-center"></div>
+        <p class="sec-desc sec-desc-white mx-auto" style="max-width:500px;">
+            Have a security requirement? Our team will get back to you within 24 hours.
+        </p>
+    </div>
+</section>
+
+<!-- ===== CONTACT INFO CARDS ===== -->
+<section style="background:var(--light);">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-lbl">Head Office</div>
+                    <div class="contact-val">3rd Floor, Security Tower,<br />M.A. Jinnah Road,<br />Karachi, Pakistan</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="contact-lbl">Phone</div>
+                    <div class="contact-val">+92-21-111-782-782<br />+92-21-000-0000<br />Emergency: 24/7</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-lbl">Email</div>
+                    <div class="contact-val">info@starsecurity.pk<br />hr@starsecurity.pk<br />sales@starsecurity.pk</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-lbl">Working Hours</div>
+                    <div class="contact-val">Mon – Sat: 9AM – 6PM<br />Sunday: Closed<br />Emergency: Always Open</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT FORM + MAP ===== -->
+<section style="background:var(--white);">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- FORM -->
+            <div class="col-lg-7">
+                <div class="sec-tag">Send Message</div>
+                <h2 class="sec-title">Send Us A <span>Message</span></h2>
+                <div class="title-line"></div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="apply-lbl">Full Name *</label>
+                        <input type="text" class="apply-ctrl" placeholder="Muhammad Ali" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="apply-lbl">Company Name</label>
+                        <input type="text" class="apply-ctrl" placeholder="Your Company Ltd." />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="apply-lbl">Email Address *</label>
+                        <input type="email" class="apply-ctrl" placeholder="you@company.com" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="apply-lbl">Phone Number *</label>
+                        <input type="text" class="apply-ctrl" placeholder="+92 300 0000000" />
+                    </div>
+                    <div class="col-12">
+                        <label class="apply-lbl">Service Required</label>
+                        <select class="apply-ctrl">
+                            <option value="" disabled selected>-- Select A Service --</option>
+                            <option>Manned Guarding</option>
+                            <option>Cash Services</option>
+                            <option>Electronic Security Systems</option>
+                            <option>Recruitment & Training</option>
+                            <option>General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="apply-lbl">Your Message *</label>
+                        <textarea class="apply-ctrl" rows="5"
+                                  placeholder="Describe your security requirements in detail..."></textarea>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button class="btn-green" style="padding:13px 36px; cursor:pointer; font-size:.88rem;">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE INFO -->
+            <div class="col-lg-5">
+                <div class="sec-tag">Our Location</div>
+                <h2 class="sec-title">Find <span>Us Here</span></h2>
+                <div class="title-line"></div>
+
+                <!-- Google Map -->
+                <div class="map-wrap mb-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.369346437547!2d67.0099!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM.A. Jinnah Road Karachi!5e0!3m2!1sen!2spk!4v1234567890"
+                            width="100%" height="260" style="border:0;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Regional Contacts -->
+                <div class="rcontact-item">
+                    <div class="rcontact-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="rcontact-title">North Region — Islamabad</div>
+                        <div class="rcontact-val">+92-51-000-0001 | Mr. Ahmed Ali</div>
+                    </div>
+                </div>
+                <div class="rcontact-item">
+                    <div class="rcontact-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="rcontact-title">East Region — Lahore</div>
+                        <div class="rcontact-val">+92-42-000-0003 | Mr. Tariq Mehmood</div>
+                    </div>
+                </div>
+                <div class="rcontact-item">
+                    <div class="rcontact-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="rcontact-title">West Region — Quetta</div>
+                        <div class="rcontact-val">+92-81-000-0002 | Mr. Babar Khan</div>
+                    </div>
+                </div>
+                <div class="rcontact-item">
+                    <div class="rcontact-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="rcontact-title">South Region — Karachi</div>
+                        <div class="rcontact-val">+92-21-000-0004 | Mr. Saeed Qureshi</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

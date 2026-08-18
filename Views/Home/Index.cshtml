@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- ===== HERO CAROUSEL ===== -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80" alt="" />
+            <div class="hero-caption">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-eyebrow">ISO 9001:2000 Certified — Since 2000</div>
+                        <h1>Best Security &<br /><span>Protection Solution</span><br />For You</h1>
+                        <p>Pakistan's most trusted security partner. 2800+ trained personnel serving 250+ corporate clients across 24 cities with absolute integrity.</p>
+                        <a asp-controller="Home" asp-action="About" class="btn-green">Read More</a>
+                        <a asp-controller="Home" asp-action="Contact" class="btn-outline-pill">Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=80" alt="" />
+            <div class="hero-caption">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-eyebrow">Professional — Trained — Reliable</div>
+                        <h1>Smart Security<br /><span>Solution For All</span><br />Business</h1>
+                        <p>From manned guarding to electronic surveillance — complete security coverage for banks, hotels, industries, and retail outlets nationwide.</p>
+                        <a asp-controller="Home" asp-action="Services" class="btn-green">Our Services</a>
+                        <a asp-controller="Home" asp-action="Contact" class="btn-outline-pill">Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="" />
+            <div class="hero-caption">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-eyebrow">Nationwide Network — 24 Cities</div>
+                        <h1>Innovative Total<br /><span>Security Solutions</span><br />Provider</h1>
+                        <p>Manned guarding, cash services, electronic security systems, and corporate investigations — all under one trusted name since 2000.</p>
+                        <a asp-controller="Home" asp-action="Careers" class="btn-green">Join Our Team</a>
+                        <a asp-controller="Home" asp-action="Contact" class="btn-outline-pill">Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <div class="c-arrow"><i class="fas fa-chevron-left"></i></div>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <div class="c-arrow"><i class="fas fa-chevron-right"></i></div>
+    </button>
+</div>
+
+<!-- ===== MINI CARDS ===== -->
+<div class="mini-bar">
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <div class="mini-card">
+                    <div class="mini-num">01</div>
+                    <div>
+                        <div class="mini-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="mini-title">Manned Guarding</div>
+                        <p class="mini-desc">Professional guards, fire squad, dog squad & bodyguards for all sectors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mini-card">
+                    <div class="mini-num">02</div>
+                    <div>
+                        <div class="mini-icon"><i class="fas fa-camera"></i></div>
+                        <div class="mini-title">Electronic Systems</div>
+                        <p class="mini-desc">CCTV, access control, fire alarm & perimeter protection — full installation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mini-card">
+                    <div class="mini-num">03</div>
+                    <div>
+                        <div class="mini-icon"><i class="fas fa-headset"></i></div>
+                        <div class="mini-title">24/7 Support</div>
+                        <p class="mini-desc">Round-the-clock emergency response with rapid deployment teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== ABOUT PREVIEW ===== -->
+<section id="about" style="background:var(--white);">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="about-img pe-3">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80" alt="About" />
+                    <div class="about-badge">
+                        <div class="badge-num">24+</div>
+                        <div class="badge-lbl">Years of<br />Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="sec-tag">About Us</div>
+                <h2 class="sec-title">Your Trusted <span>Security Partner</span><br />Since The Year 2000</h2>
+                <div class="title-line"></div>
+                <p class="sec-desc mb-4">Founded in 2000, Star Security Services has grown into Pakistan's leading Total Security Solutions Provider — serving over 250 corporate clients across 24 cities with 2800+ trained personnel.</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="about-counter">
+                            <div class="counter-icon"><i class="fas fa-users"></i></div>
+                            <div><div class="counter-num">2800+</div><div class="counter-lbl">Trained Personnel</div></div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="about-counter">
+                            <div class="counter-icon"><i class="fas fa-building"></i></div>
+                            <div><div class="counter-num">250+</div><div class="counter-lbl">Corporate Clients</div></div>
+                        </div>
+                    </div>
+                </div>
+                <a asp-controller="Home" asp-action="About" class="btn-green">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES PREVIEW ===== -->
+<section style="background:var(--light);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="sec-tag sec-tag-center">Our Services</div>
+            <h2 class="sec-title">Our <span>Security</span> Services</h2>
+            <div class="title-line title-line-center"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="svc-num">01</div>
+                    <div class="svc-icon"><i class="fas fa-user-shield"></i></div>
+                    <div class="svc-title">Manned Guarding</div>
+                    <p class="svc-desc">Professional guards, fire squad, dog squad, and bodyguards for industries, banks, retail outlets and hotels.</p>
+                    <a asp-controller="Home" asp-action="Services" class="svc-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="svc-num">02</div>
+                    <div class="svc-icon"><i class="fas fa-money-bill-transfer"></i></div>
+                    <div class="svc-title">Cash Services</div>
+                    <p class="svc-desc">Secured cash transfer, ATM replenishment, vaulting, processing and multi-point cash collection services.</p>
+                    <a asp-controller="Home" asp-action="Services" class="svc-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="svc-num">03</div>
+                    <div class="svc-icon"><i class="fas fa-camera"></i></div>
+                    <div class="svc-title">Electronic Systems</div>
+                    <p class="svc-desc">CCTV, access control, fire alarm, intruder alarms and perimeter protection — complete installation.</p>
+                    <a asp-controller="Home" asp-action="Services" class="svc-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="svc-num">04</div>
+                    <div class="svc-icon"><i class="fas fa-people-group"></i></div>
+                    <div class="svc-title">Recruitment & Training</div>
+                    <p class="svc-desc">End-to-end recruitment, training, and deployment of skilled manpower across all security divisions.</p>
+                    <a asp-controller="Home" asp-action="Services" class="svc-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section style="background:var(--dark); padding:0;">
+    <div class="row g-0">
+        <div class="col-lg-5 why-img">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80" alt="Why Star Security" />
+        </div>
+        <div class="col-lg-7 d-flex align-items-center">
+            <div class="why-content w-100">
+                <div class="sec-tag">Why Choose Us</div>
+                <h2 class="sec-title sec-title-white">Why <span>Star Security</span><br />Is The Right Choice</h2>
+                <div class="title-line mb-4"></div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div><div class="why-title">Trusted & Certified</div><div class="why-desc">ISO 9001:2000 certified with 24+ years of proven track record in Pakistan's private security industry.</div></div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-star"></i></div>
+                    <div><div class="why-title">Premium Quality Services</div><div class="why-desc">Continuously upgraded training programs ensuring our personnel meet international standards.</div></div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-microchip"></i></div>
+                    <div><div class="why-title">Smart Technology</div><div class="why-desc">State-of-the-art ERP and electronic security systems for complete operational transparency.</div></div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <div><div class="why-title">24/7 Emergency Support</div><div class="why-desc">Round-the-clock emergency response with dedicated regional teams ready to deploy instantly.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS PREVIEW ===== -->
+<section style="background:var(--light);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="sec-tag sec-tag-center">Testimonial</div>
+            <h2 class="sec-title">What Our <span>Clients</span> Say</h2>
+            <div class="title-line title-line-center"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testi-card">
+                    <div class="testi-qmark">"</div>
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testi-text">Star Security has been our partner for 6 years. Their guards are well-trained, disciplined, and always professional.</p>
+                    <div class="testi-line"></div>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><div class="testi-name">Zubair Ahmed</div><div class="testi-role">Head of Facilities, National Bank</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testi-card">
+                    <div class="testi-qmark">"</div>
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testi-text">Their cash services division is exceptionally reliable. Zero incidents in 4 years of partnership.</p>
+                    <div class="testi-line"></div>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><div class="testi-name">Sana Malik</div><div class="testi-role">Operations Manager, Hyperstar</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testi-card">
+                    <div class="testi-qmark">"</div>
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p class="testi-text">The CCTV installation was flawless. Star's technical team delivered a fully integrated security system.</p>
+                    <div class="testi-line"></div>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><div class="testi-name">Dr. Imran Siddiqui</div><div class="testi-role">Admin Director, Agha Khan Hospital</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+﻿@model List<StarSecurityServices.Models.Service>
+@{
+    ViewData["Title"] = "Services";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-shield-halved me-2" style="color:var(--primary)"></i>All Services
+    </h5>
+    <a asp-controller="Admin" asp-action="AddService" class="btn-primary-admin">
+        <i class="fas fa-plus me-2"></i>Add Service
+    </a>
+</div>
+
+<div class="admin-table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Icon</th>
+                <th>Service Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count == 0)
+            {
+                <tr>
+                    <td colspan="5" class="text-center py-4" style="color:#888;">
+                        <i class="fas fa-shield-halved fa-2x mb-2 d-block" style="color:#ddd;"></i>
+                        No services found. Add your first service.
+                    </td>
+                </tr>
+            }
+            @foreach (var service in Model)
+            {
+                <tr>
+                    <td>@service.Id</td>
+                    <td>
+                        <div style="width:38px;height:38px;background:rgba(132,199,41,.1);
+                            display:flex;align-items:center;justify-content:center;border-radius:3px;">
+                            <i class="@service.IconClass" style="color:var(--primary)"></i>
+                        </div>
+                    </td>
+                    <td><strong>@service.ServiceName</strong></td>
+                    <td style="max-width:300px; white-space:nowrap;
+                        overflow:hidden; text-overflow:ellipsis;">
+                        @service.Description
+                    </td>
+                    <td>
+                        <a asp-controller="Admin" asp-action="EditService"
+                               asp-route-id="@service.Id" class="btn-edit me-1">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a asp-controller="Admin" asp-action="DeleteService"
+                               asp-route-id="@service.Id" class="btn-delete"
+                               onclick="return confirm('Delete this service?')">
+                            <i class="fas fa-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

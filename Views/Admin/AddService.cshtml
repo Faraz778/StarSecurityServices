@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Add Service";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold mb-0" style="color:var(--dark);">
+        <i class="fas fa-plus me-2" style="color:var(--primary)"></i>Add New Service
+    </h5>
+    <a asp-controller="Admin" asp-action="Services" class="btn-back">
+        <i class="fas fa-arrow-left me-2"></i>Back
+    </a>
+</div>
+
+<div class="form-card">
+    <form method="post" asp-action="AddService" asp-controller="Admin">
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">Service Name *</label>
+                <input type="text" name="ServiceName" class="form-control"
+                       placeholder="e.g. Manned Guarding" required />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Icon Class (Font Awesome)</label>
+                <input type="text" name="IconClass" class="form-control"
+                       placeholder="e.g. fas fa-user-shield" />
+                <small style="color:#888; font-size:.75rem;">
+                    Visit fontawesome.com to find icon classes
+                </small>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea name="Description" class="form-control" rows="4"
+                          placeholder="Describe this service..."></textarea>
+            </div>
+
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn-primary-admin">
+                    <i class="fas fa-save me-2"></i>Save Service
+                </button>
+                <a asp-controller="Admin" asp-action="Services"
+                   class="btn-back ms-2">Cancel</a>
+            </div>
+
+        </div>
+    </form>
+</div>
